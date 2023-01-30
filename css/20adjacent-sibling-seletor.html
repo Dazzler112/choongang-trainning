@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            color:blue;
+        }
+        /* 인접형제선택자 */
+        h1 + p {
+            background-color: yellow;
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <!-- (h1>lorem1^p>lorem)*2+p>lorem -->
+    <h1>Lorem.</h1>
+    <!-- css에 h1+p 하면 선택됨 --><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est corrupti quam eos dolores alias nemo natus, ad, repellendus possimus omnis quia autem adipisci incidunt corporis veritatis itaque? Error, animi.</p>
+    <h1>A!</h1>
+    <!-- css에 h1+p 하면 선택됨 --><p>Omnis non, deleniti est amet magni quidem vitae, doloremque, impedit alias hic qui beatae. Maxime, atque doloribus enim a blanditiis quae ad sed consequuntur expedita quo illo accusamus molestiae veritatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure placeat doloremque enim asperiores adipisci dicta deleniti ipsam repudiandae illo, autem nihil laudantium facere nemo repellat quibusdam consequatur, reiciendis harum quam.</p>
+</body>
+</html>

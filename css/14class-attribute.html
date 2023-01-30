@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .note {
+            color:chartreuse;
+            background-color: darkgoldenrod;
+        }
+        .error {
+            color: gainsboro;
+            background-color: darkorchid;
+        }
+        h1:nth-child(4) {
+            color: crimson;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1.note*5>lorem3 -->
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note">Voluptatibus, repellat saepe?</h1>
+    <h1 class="note">Dolorum, natus quam.</h1>
+    <h1 class="note">At, voluptatibus laudantium!</h1>
+    <h1 class="note">Soluta, consequuntur esse?</h1>
+
+    <!-- h1.note.error -->
+    <h1 class="note error"></h1>
+    <!-- h1.error.note -->
+    <h1 class="error note"></h1>
+    <p class="error note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti est neque saepe magnam quas repudiandae nam ad culpa ullam accusamus, asperiores cupiditate. Accusamus blanditiis expedita ea quibusdam commodi voluptates perspiciatis?</p>
+    <p class="error note">Tenetur ex, ab temporibus quo quidem, esse iste rem ut quae amet illo eos commodi suscipit quas quod nihil natus saepe quis optio provident pariatur. Debitis dolore earum obcaecati aperiam.</p>
+
+    <!-- p#para1.erorr.special -->
+    <p id="para1" class="erorr special"></p>
+</body>
+</html>

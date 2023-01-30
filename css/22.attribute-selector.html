@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        [title] {
+            color:blue;
+        }
+        /* title 속성의 값이 hello인 요소들 */
+        [title=hello] {
+            background-color: gold;
+        }
+        /* title속성의 값이 world인 요소들 */
+        /* 의 배경을 초콜릿으로 */
+        [title = "world"] {/*따옴표 붙여도 되고 안붙여도됨*/ 
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1*5>lorem1 -->
+    <h1 title="hello">Lorem.</h1>
+    <h1 title="world">Voluptates.</h1>
+    <h1>Sequi.</h1>
+    <h1>Libero.</h1>
+    <h1>Iusto.</h1>
+</body>
+</html>
