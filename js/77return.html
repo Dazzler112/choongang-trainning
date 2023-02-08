@@ -12,37 +12,32 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = "java";
-    let b = "html";
-    let c = "css";
-    let d = "javascript";
-    let e = "react";
+    function a(param){
+        console.log("어떤 일을 함");
+    }
+    a(3);
+    a(4);
 
-    console.log(a);
-    console.log(b);  // 일일이 이렇게 let 입력해서 보다 어디다
-    console.log(c); //넣어놓고 꺼내 쓰고싶다? ->array
-    console.log(d);
-    console.log(e);
-    
-    // array : 여러값을 저장한 자료형
-    console.log("array 사용***********");
-    let f = ["java", "css", "html", "vue", "react"];
+    function b(param){
+        console.log("비함수가 일함");
+        
+        //함수의 실행 결과
+        //결과값을 return(반환)했다
+        return "어떤 결과";
+    }
+    b(5);
+    b(6);
 
-    for (let i = 0; i < f.length; i++){
-        console.log(f[i]);
-    }//반복문은 array와 궁합이 잘맞음
+    let r1 = a();//결과 없음
+    let r2 = b();//결과 있음(return의 오른쪽 값)
+    //아직 변수 받기만 했지 활용 안함
 
-    //여러 값을 타입 구분없이 가질수 있음 
-    let g = [3, "css", true, 3.14, null, undefined];
-    
-    //빈배열 도 생성 가능
-    let h = [];
+    console.log(r1); //undefined 받은게 없으니까
+    console.log(r2); //리턴 값을 출력함
+    console.log(b());// 이렇게 하면 바로 반환된값 사용가능
 
-    //코드가 길면 각 값 앞에서 새로운 줄 입력
-    let i =["javascript",
-            "html은 페이지의 구조를 나타낸다", 
-            "css는 html요소를 꾸미는 코드다."
-            ];
+    //return값을 받으려면 변수를 줘서(r2)
+    // 반영(console.log)해줘야한다
     </script>
 </body>
 </html>

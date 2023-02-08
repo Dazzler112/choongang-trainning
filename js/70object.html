@@ -12,37 +12,27 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = "java";
-    let b = "html";
-    let c = "css";
-    let d = "javascript";
-    let e = "react";
-
-    console.log(a);
-    console.log(b);  // 일일이 이렇게 let 입력해서 보다 어디다
-    console.log(c); //넣어놓고 꺼내 쓰고싶다? ->array
-    console.log(d);
-    console.log(e);
     
-    // array : 여러값을 저장한 자료형
-    console.log("array 사용***********");
-    let f = ["java", "css", "html", "vue", "react"];
+    let a= ['java', 'spring', 55];
+    //접근 가능 하게 하려면 아래처럼 로그 써줬음
+    console.log(a[0]);
+    console.log(a[2]);
 
-    for (let i = 0; i < f.length; i++){
-        console.log(f[i]);
-    }//반복문은 array와 궁합이 잘맞음
+    //object는 안될까? ㄴㄴ
+    //object : 여러 값을 저장한 자료형(data type)
+    //{} 코드블록 만들때도 사용하지만 오브젝트 만들때도 사용함
+    //각 값에 이름을 명시(property = ex lang프로퍼티 frame프로퍼티 등등))
+    let b = {lang:"java", frame: "spring",age: 55}; //단 오브젝트는 값 앞에 이름을 써줘야함!!
+    //그럼 접근할때 어떻게 해야할까?
+    //값을 읽을때 ["property name"] 사용 (거의 안씀)
+    console.log(b["lang"]); //값을 저장하고 있는 이름을 스펠링으로 타이핑
+    console.log(b["frame"]);
+    console.log(b["age"]);
 
-    //여러 값을 타입 구분없이 가질수 있음 
-    let g = [3, "css", true, 3.14, null, undefined];
-    
-    //빈배열 도 생성 가능
-    let h = [];
-
-    //코드가 길면 각 값 앞에서 새로운 줄 입력
-    let i =["javascript",
-            "html은 페이지의 구조를 나타낸다", 
-            "css는 html요소를 꾸미는 코드다."
-            ];
+    //값을 읽을때 .propertyName 사용 (이 기호로 사용할 것) <-99%가 이 기호로 쓸것이다
+    console.log(b.lang);
+    console.log(b.frame);
+    console.log(b.age);
     </script>
 </body>
 </html>

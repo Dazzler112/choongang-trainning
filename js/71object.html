@@ -12,37 +12,28 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = "java";
-    let b = "html";
-    let c = "css";
-    let d = "javascript";
-    let e = "react";
-
-    console.log(a);
-    console.log(b);  // 일일이 이렇게 let 입력해서 보다 어디다
-    console.log(c); //넣어놓고 꺼내 쓰고싶다? ->array
-    console.log(d);
-    console.log(e);
+    //객체의 property 이름은 lowerCamelCase로 작성
+    let a = {address : "seoul",
+             age:55, 
+             bookTitle: "spring", //이런식으로 카멜케이스 그리고 프로퍼티 마다 1줄씩 띄어서
+             "car model" : "kia"}; //혹시 띄어쓰기 넣어야 할일이 있으면 ""넣어서 작성 근대 하지 말아라
+    console.log(a.address);
+    console.log(a.age);
+    console.log(a.bookTitle);         
+    console.log(a["car model"]); //대신 .car model 작성 안됨! 그냥 하지 말아라!
     
-    // array : 여러값을 저장한 자료형
-    console.log("array 사용***********");
-    let f = ["java", "css", "html", "vue", "react"];
+    a.address = "jeju" //변경도 다른 것과 비슷함
+    console.log(a.address);
 
-    for (let i = 0; i < f.length; i++){
-        console.log(f[i]);
-    }//반복문은 array와 궁합이 잘맞음
+    let b = a.age; //다른변수에 옮겨 담을수도 있음
+    a.age = 66; 
+    console.log(b); //잘 옮겨 담아짐 55
+    console.log(a.age); //역시 위에서 변경한 것도 잘 반영됨 66
 
-    //여러 값을 타입 구분없이 가질수 있음 
-    let g = [3, "css", true, 3.14, null, undefined];
-    
-    //빈배열 도 생성 가능
-    let h = [];
+    console.log(a.job); //해당 프로퍼티는 없음 undefined
 
-    //코드가 길면 각 값 앞에서 새로운 줄 입력
-    let i =["javascript",
-            "html은 페이지의 구조를 나타낸다", 
-            "css는 html요소를 꾸미는 코드다."
-            ];
+    a.job = "teacher"; //없지만 있는것 처럼 할당해 주면 사용 가능
+    console.log(a.job);
     </script>
 </body>
 </html>

@@ -12,37 +12,42 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = "java";
-    let b = "html";
-    let c = "css";
-    let d = "javascript";
-    let e = "react";
+    function a(){
+        console.log("파라미터 없는 함수");
+    }
+    a();
+    a(33);//뭔가 넣고싶다 근대 쓸모 없는 코드임
 
-    console.log(a);
-    console.log(b);  // 일일이 이렇게 let 입력해서 보다 어디다
-    console.log(c); //넣어놓고 꺼내 쓰고싶다? ->array
-    console.log(d);
-    console.log(e);
+    function b(param1,param2){
+        console.log("파라미터 2개 있는 함수.");
+        console.log(param1, param2);
+    }
+
+    b();
+    b(99);
+    b(11,22); //parameter(인수) 매개변수 순서에 맞게 들어감 (prameter1,parameter2)
     
-    // array : 여러값을 저장한 자료형
-    console.log("array 사용***********");
-    let f = ["java", "css", "html", "vue", "react"];
+    // practice 함수 만들기
+    function printDouble(num){
+        let d = num * 2;
+        console.log(d); 
+    }
+    printDouble(3); //함수를 만들어보자 6출력됨
+    printDouble(4); //8
+    printDouble(100); //200
 
-    for (let i = 0; i < f.length; i++){
-        console.log(f[i]);
-    }//반복문은 array와 궁합이 잘맞음
 
-    //여러 값을 타입 구분없이 가질수 있음 
-    let g = [3, "css", true, 3.14, null, undefined];
-    
-    //빈배열 도 생성 가능
-    let h = [];
 
-    //코드가 길면 각 값 앞에서 새로운 줄 입력
-    let i =["javascript",
-            "html은 페이지의 구조를 나타낸다", 
-            "css는 html요소를 꾸미는 코드다."
-            ];
+    //연습 printSum(3, 4) //7  (100,200);//300 ("java", "css")//"javacss"출력되도록
+
+    function printSum(sum1,sum2){
+        let e = sum1 + sum2;
+        console.log(e);
+    }
+
+    printSum(3, 4) //7
+    printSum(100, 200) //300
+    printSum("java", "css") //"javacss"
     </script>
 </body>
 </html>

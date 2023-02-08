@@ -12,37 +12,26 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = "java";
-    let b = "html";
-    let c = "css";
-    let d = "javascript";
-    let e = "react";
+        function printHello(){
+        console.log("SAY HELLO!!");
+        }
+        function printWorld(){
+            console.log("WORLD.");
+        }
+        function printHelloWorld(){
+            function newFunction(){
+                console.log("new function");
+            }  // <-- 작성 정의 선언
+            printHello();
+            printWorld();
+            newFunction();
+        }
+        // newFunction();  //에러나는 이유? newFunction은 코드블록에서 생성했기 때문에 저길 벗어날수 가 없음
+    // 함수실행(execute)?? 함수호출(call, invoke)?? 둘다 같은 뜻
 
-    console.log(a);
-    console.log(b);  // 일일이 이렇게 let 입력해서 보다 어디다
-    console.log(c); //넣어놓고 꺼내 쓰고싶다? ->array
-    console.log(d);
-    console.log(e);
-    
-    // array : 여러값을 저장한 자료형
-    console.log("array 사용***********");
-    let f = ["java", "css", "html", "vue", "react"];
-
-    for (let i = 0; i < f.length; i++){
-        console.log(f[i]);
-    }//반복문은 array와 궁합이 잘맞음
-
-    //여러 값을 타입 구분없이 가질수 있음 
-    let g = [3, "css", true, 3.14, null, undefined];
-    
-    //빈배열 도 생성 가능
-    let h = [];
-
-    //코드가 길면 각 값 앞에서 새로운 줄 입력
-    let i =["javascript",
-            "html은 페이지의 구조를 나타낸다", 
-            "css는 html요소를 꾸미는 코드다."
-            ];
+    printHello(); // 콘솔에 "HELLO!!" 출력되게 하기
+    printWorld();
+    printHelloWorld();
     </script>
 </body>
 </html>
