@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    <!-- h1#head$*3>lorem1 -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        In!
+    </h1>
+    <h1 id="head3">
+        Aliquid?
+    </h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        //이번엔 tag네임을 찝어볼꺼임
+    let heads = document.getElementsByTagName("h1");
+        //이건 tag가 여러개일수 있으니 이름이elements로 돼있음
+        //이 property는 뭘로 return받느냐? array로 받음
+        console.log(heads[0].textContent);//array로 받았음
+        console.log(heads[1].textContent);
+        console.log(heads[2].textContent);
+        //일일이 로그쳐도 되고 반복문으로 해도 됨
+        for(let i = 0; i < heads.length; i++){
+            console.log(heads[i].textContent);
+        }
+        heads[1].textContent = "HI JAVASCRIPT";
+        heads[2].remove();
+    </script>
+</body>
+</html>
