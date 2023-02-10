@@ -9,32 +9,21 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- button*2#button$+h1>lorem -->
+    <button id="button1">숨기기</button>
+    <button id="button2">보이기</button>
+    <h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero numquam, debitis ut molestiae possimus assumenda harum voluptate cum sed quia ex qui doloribus. Officiis, similique? Repellat ullam nisi nemo ratione.
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //jquery
-        $("#input2").keyup(function(e){ //$표시가 곧 jquery
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`)
-                $(this).val("");
-            }
-        });
-
-
-    //보통의 자바스크립트 코드(vanlila javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e){
-        if (e.key === "Enter"){
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+    $("#button1").on("click",function(){
+        $("h1").slideUp(1000);
+    })
+    $("#button2").on("click",function(){
+        $("h1").slideDown(1000);
+    })
     </script>
 </body>
 </html>

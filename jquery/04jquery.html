@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    <!-- h1#head$*3>lorem1^p#para$*3>lorem -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Dolorum?
+    </h1>
+    <h1 id="head3">
+        Id.
+    </h1>
+    <p id="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae saepe eaque error asperiores quis rerum consequatur veritatis aperiam harum, ab ut mollitia, sapiente, voluptatum maiores assumenda nihil iusto blanditiis quaerat?
+    </p>
+    <p id="para2">
+        Fuga nemo optio quidem excepturi ipsa mollitia aperiam adipisci facere a. Doloremque itaque porro cupiditate facere ducimus dolores et ab, voluptatem quod rerum error praesentium asperiores? Qui consectetur ipsam numquam.
+    </p>
+    <p id="para3">
+        Temporibus dignissimos, nisi earum tempore quisquam perspiciatis quo? Voluptatum eaque veniam quod consequatur iste non fugit, reiciendis quis ea assumenda eius facere enim ducimus repudiandae tenetur facilis quas est autem?
+    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    //$("#head1"); //이런식으로 변수 선언
+    $("#head1").hide(3000);
+    //$("p")//이런식으로 p들을 한번에 선언 가능
+    $("p").hide(5000);
+
+    //바닐라의 경우는 이렇게 아래처럼 vanilla js
+    let paras = document.querySelectorAll("p");
+    for(let i = 0; i < paras.length; i++){
+        paras[i].style = {display:"none"};
+    }
+    </script>
+</body>
+</html>

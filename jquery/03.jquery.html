@@ -9,32 +9,35 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- h1#head$*5>lorem1 -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Ea.
+    </h1>
+    <h1 id="head3">
+        Ad.
+    </h1>
+    <h1 id="head4">
+        Sunt?
+    </h1>
+    <h1 id="head5">
+        Suscipit?
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //jquery
-        $("#input2").keyup(function(e){ //$표시가 곧 jquery
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`)
-                $(this).val("");
-            }
-        });
+    let head1 = $("#head1");
+    head1.hide(); //API 숨기는기능
 
-
-    //보통의 자바스크립트 코드(vanlila javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e){
-        if (e.key === "Enter"){
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+    let head2 = $("#head2");
+    head2.hide(1000); //API hide()항목 누루면 사용법 자세히 알수있음
+    
+    let head3 = $("#head3");
+    $("#head3").hide(2000);
+    $("#head4").hide("slow");
+    $("#head5").hide("fast")
     </script>
 </body>
 </html>

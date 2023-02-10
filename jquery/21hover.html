@@ -9,31 +9,26 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- button#button$*2{호버$} -->
+    <button id="button1">호버1</button>
+    <button id="button2">호버2</button>
+
+    <div id="res"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //jquery
-        $("#input2").keyup(function(e){ //$표시가 곧 jquery
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`)
-                $(this).val("");
-            }
-        });
+    $("#button1").mouseenter(function(){
+        $("#res").text("5번버튼에 포인터 들어감");
+    })
+    $("#button1").mouseleave(function(){
+        $("#res").text("1번버튼 포인터 떠남");
+    })
 
-
-    //보통의 자바스크립트 코드(vanlila javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e){
-        if (e.key === "Enter"){
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
+    $("#button2").hover(function(){
+        $("#res").text("2번버튼 포이터 들어감");}
+    ,function(){
+        $("#res").text("2번버튼 포인터 떠남");
+        
     });
     </script>
 </body>

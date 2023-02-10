@@ -9,32 +9,35 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- button*2#button${클릭$} -->
+    <button id="button1">클릭1</button>
+    <button id="button2">클릭2</button>
+    <button id="button3">오른쪽 클릭3</button>
+    <button id="button4">더블 클릭4</button>
+    <button id="button5">포인터 들어옴5</button>
+    <button id="button6">포인터 나감6</button>
+    <div id="res"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //jquery
-        $("#input2").keyup(function(e){ //$표시가 곧 jquery
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`)
-                $(this).val("");
-            }
-        });
-
-
-    //보통의 자바스크립트 코드(vanlila javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e){
-        if (e.key === "Enter"){
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+        $("#button1").on("click",function(){
+            $("#res").text("1번 버튼 클릭됨");
+        })
+        $("#button2").click(function(){
+            $("#res").text("2번 버튼 클릭됨");
+        })
+        $("#button3").contextmenu(function(){
+            $("#res").text("3번 버튼 오른쪽 클릭됨");
+        })
+        $("#button4").dblclick(function(){
+            $("#res").text("4번 버튼 더블 클릭됨")
+        })
+        $("#button5").mouseenter(function(){
+            $("#res").text("5번 포인터 들어옴")
+        })
+        $("#button6").mouseleave(function(){
+            $("#res").text("6번 포인터 나감")
+        })
     </script>
 </body>
 </html>

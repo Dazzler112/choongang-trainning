@@ -9,32 +9,34 @@
     </style>
 </head>
 <body>
-    <!-- input#input1+ul#list1 -->
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <!-- h1>lorem1^p>lorem -->
+    <h1 style="cursor: pointer;">
+        Lorem.
+    </h1>
+    <p style="display: none;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio similique architecto possimus omnis repudiandae consequuntur magnam necessitatibus dolor dolorum, qui sit. Sed consequuntur quae ullam, odit dolorum vel iste suscipit!
+    </p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //jquery
-        $("#input2").keyup(function(e){ //$표시가 곧 jquery
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`)
-                $(this).val("");
-            }
-        });
+        //h1 요소에 마우스 포인터 들어가면
+        //p요소 보이게
+        //h1요소에서 마우스 포인터 떠나면
+        //p요소 숨겨지게
+        $("h1").hover(function(){
+            $("p").slideDown("fast");
+        },function(){
+            $("p").slideUp("fast");
+        })
 
 
-    //보통의 자바스크립트 코드(vanlila javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e){
-        if (e.key === "Enter"){
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+        
+        /* 내가 작성한것
+        $("h1").hover(function(){
+            $("p").fadeIn(300);
+        },function(){
+            $("p").fadeOut(400)
+        })   */
     </script>
 </body>
 </html>
