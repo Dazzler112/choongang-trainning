@@ -9,14 +9,17 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <h1>
+        Lorem.
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+        //도큐먼트 객체를 무슨일이 있을때 실행할수 있도록 할수도있음
+        //문서가 완료된 이후에 실행돼서 어느 위치에 있던 상관 없는대
+    $(document).ready(function(){
+        console.log("$h1");//dom이 완료된 이후에 실행되야할 코드들이 있어서 쓴다고 생각하면됨
+    })
     </script>
 </body>
 </html>

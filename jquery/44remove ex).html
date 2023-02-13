@@ -9,14 +9,32 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- input#input1+ul#list1 -->
+    <input type="text" id="input1">
+    <ul id="list1">
+    </ul>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    $("#input1").keyup(function(e){
+        if(e.key==="Enter"){
+            let liElem = $("<li>");
+            liElem.text($(this).val());
+        //이 아래에 li지우는 함수를 써줘야 유효
+            liElem.click(function(){
+                $(this).remove();
+            })
+            $("#list1").append(liElem);
+
+            $(this).val("");
+        }
+    })
+    
+    /* 생성된 li를 지워라 할때 함수뒤에 쓰는게 아니라!
+    li.text 아래에 써줘야함 why? html 생성될때 li엘리멘탈이 없기 때문에
+    ,$("li").click(function(){
+        $("li").remove();
+    }) */
     </script>
 </body>
 </html>

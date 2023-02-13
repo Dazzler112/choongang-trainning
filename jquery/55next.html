@@ -9,14 +9,43 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- (h1>lorem2^p>lorem5)*5 -->
+    <h1>
+        Lorem, ipsum.
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
+    <h1>
+        Sapiente, eaque.
+    </h1>
+    <p>
+        Magnam quos incidunt temporibus assumenda!
+    </p>
+    <h1>
+        Eaque, ipsum.
+    </h1>
+    <p>
+        Amet id quisquam unde libero.
+    </p>
+    <h1>
+        Dolores, ipsam!
+    </h1>
+    <p>
+        Libero repellendus cupiditate provident quod.
+    </p>
+    <h1>
+        Possimus, quas.
+    </h1>
+    <p>
+        Maxime aperiam consequuntur harum fuga.
+    </p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    $("h1").click(function(){
+        $(this).next().slideToggle();
+    })
     </script>
 </body>
 </html>

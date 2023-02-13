@@ -9,14 +9,24 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- h1>#head$*3>lorem1 -->
+    <h1>
+        <div id="head1">
+            Lorem.
+        </div>
+        <div id="head2">
+            Nobis?
+        </div>
+        <div id="head3">
+            Quo.
+        </div>
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    $("#head1").after("<p>Hello World</p>")
+    $("#head2").after("<p>hi jquery</p>")
+    $("#head3").after("<p>more </p><p>more...</p>")
     </script>
 </body>
 </html>

@@ -9,14 +9,31 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- h1*2#head>lorem2+span>lorem -->
+    <h1 id="head1">
+        Lorem, ipsum.
+        <span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, suscipit? Dolor ex quae beatae. Recusandae hic doloribus odio perspiciatis quidem doloremque aliquam necessitatibus dolores quod, dicta voluptate suscipit nulla soluta.
+        </span>
+    </h1>
+    <h1 id="head2">
+        Commodi, similique.
+        <span>
+            Accusamus id sint dolor, pariatur odio illo, consequatur impedit aspernatur veritatis, unde ipsa. Quod fugiat quos officiis, doloremque unde sequi alias enim pariatur quia earum! Maiores assumenda autem expedita? Aliquam?
+        </span>
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    let text1 = $("#head1").text();//안에있는 텍스트 정보들만 다 가져옴
+    console.log(text1); //.text() : 정확히 말하면 텍스트콘텐츠를 불러오는 메소드
+
+    console.log($("#head2").text());
+
+    console.log($("#head1 > span").text());
+    console.log($("#head2 > span").text());
+
+    console.log($("span").text());
     </script>
 </body>
 </html>

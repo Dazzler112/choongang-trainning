@@ -9,14 +9,51 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- h1*10>lorem1 -->
+    <h1>
+        Lorem.
+    </h1>
+    <h1>
+        Eius.
+    </h1>
+    <h1>
+        Odit.
+    </h1>
+    <h1>
+        Quidem!
+    </h1>
+    <h1>
+        Quaerat?
+    </h1>
+    <h1>
+        Nemo?
+    </h1>
+    <h1>
+        Culpa?
+    </h1>
+    <h1>
+        Voluptatum.
+    </h1>
+    <h1>
+        Molestiae.
+    </h1>
+    <h1>
+        At?
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+        $("h1").click(function(){
+            //console.log("Clicked!!");
+            //console.log($(this).text());
+            $(this).remove();
+        })
+
+
+    /* 내가한거
+     $("h1").on("click",function(){
+        $(this).remove();
+    }) */
     </script>
 </body>
 </html>

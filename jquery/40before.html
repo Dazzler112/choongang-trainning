@@ -9,14 +9,33 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- h1#head$*5>lorem1 -->
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Vero.
+    </h1>
+    <h1 id="head3">
+        Vitae.
+    </h1>
+    <h1 id="head4">
+        Sunt.
+    </h1>
+    <h1 id="head5">
+        Animi!
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    $("#head1").before("hello");
+    $("#head2").before("<p>world</p>")
+    $("#head3").before("<p>css</p><p>html</p>")
+
+    let para = $("<p />");
+    para.text("spring");
+
+    $("#head4").before(para);
     </script>
 </body>
 </html>

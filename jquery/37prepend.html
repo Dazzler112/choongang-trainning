@@ -9,14 +9,22 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- div#box$*3>lorem1 -->
+    <div id="box1">
+        Lorem.
+    </div>
+    <div id="box2">
+        Quisquam.
+    </div>
+    <div id="box3">
+        Eligendi?
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    $("#box1").prepend("hello");
+    $("#box2").prepend("<h1>hi</h1>");
+    $("#box3").prepend($("<h2>world</h2>")); //jquey객체 방식으로도 해보자
     </script>
 </body>
 </html>

@@ -9,14 +9,30 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <input type="text" id="input1">
+    <ul id ="list">
+        <li>
+            Lorem.
+        </li>
+    </ul>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+
+    $("#input1").keyup(function(e){
+        if(e.key === "Enter"){
+        //#input1요소에 엔터 치면
+        // #input1의 val를 콘텐트로 가진 새 li요소를
+            let content = $("#input1").val();
+            let lielem = $("<li></li>");
+            lielem.text(content);
+
+            //#list1끝에 추가한다.
+            $("#list1").append(lielem);
+            //input의 value를 초기화한다\
+            $("#input1").val("");
+        }
+    })
     </script>
 </body>
 </html>

@@ -9,14 +9,29 @@
     </style>
 </head>
 <body>
-    <input type="text">
-    <h1></h1>
+    <!-- div*3>a#link$>lorem1 -->
+    <div>
+        <a href="https://www.daum.net" id="link1">
+            Lorem.
+        </a>
+    </div>
+    <div>
+        <a href="" id="link2">
+            Nesciunt.
+        </a>
+    </div>
+    <div>
+        <a href="" id="link3">
+            Mollitia?
+        </a>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    $("input").keyup(function(){
-        $("h1").text($(this).val());
-    });
+    console.log($("#link1").attr("href"));
+    $("#link2").attr("href","https://www.naver.com")
+    //#link3요소의 href속성 변경
+    $("#link3").attr("href","https://www.google.com")
     </script>
 </body>
 </html>
